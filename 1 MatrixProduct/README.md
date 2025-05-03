@@ -2,7 +2,7 @@
 
 The entry of the resulting matrix `C` at row `i` and column `j`, denoted as $c_{ij}$, is computed using the following summation:  
 
-$ c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj} $
+$c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}$
      
 This means:
 - Fix a row `i` from matrix `A`
