@@ -53,8 +53,8 @@ The repository is organized into the following components:
    Open a terminal and run:
 
    ```bash
-   git clone https://github.com/ByronVelasco/SortingAlgorithms.git
-   cd SortingAlgorithms
+   git clone https://github.com/ByronVelasco/MatrixMultiplication.git
+   cd MatrixMultiplication
 
 2. **Install the required libraries**
    
