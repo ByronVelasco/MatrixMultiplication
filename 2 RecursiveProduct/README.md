@@ -7,9 +7,7 @@ Instead of computing the result in a single loop over all entries, the recursive
 1. **Divides** each matrix into four equal-sized submatrices (quadrants).
 2. Computes the resulting submatrices of the product matrix using the rule: 
 
-    $
-    C_{ij} = \sum_{k=1}^{2} A_{ik} \cdot B_{kj}
-    $  
+    $ C_{ij} = \sum_{k=1}^{2} A_{ik} \cdot B_{kj} $  
 
    where each multiplication $A_{ik} \cdot B_{kj}$ is itself a **recursive call** on smaller matrices.
 3. **Combines** the four resulting submatrices to build the final product matrix.
