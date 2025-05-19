@@ -4,20 +4,18 @@
 
 This project presents a theoretical comparison of three different algorithms for square matrix multiplication:
 
-1. **Iterative Multiplication**
-2. **Recursive Multiplication**
-3. **Strassen's Algorithm**
+1. **Iterative Matrix Multiplication**
+2. **Recursive Matrix Multiplication**
+3. **Strassen's Method**
 
 Each algorithm is described in terms of its logic, structure, and computational complexity. While all three aim to compute the product of two square matrices $\left( A \times B = C \right)$, their strategies and efficiencies differ significantly.
-
-Due to the high time cost of recursive and Strassen-based methods in practical Python implementations, this project focuses on **theoretical insight and algorithmic understanding**, rather than performance benchmarks.
 
 ## Objectives
 
 - Describe and implement three core matrix multiplication strategies:
-  - The classical triple-loop method.
+  - The classical method.
   - The divide-and-conquer recursive approach.
-  - Strassen's algorithm, which reduces the number of multiplications.
+  - Strassen's method, which reduces the number of multiplications.
   
 - Analyze the **computational complexity** of each method:
   
@@ -27,50 +25,35 @@ Due to the high time cost of recursive and Strassen-based methods in practical P
 
 ## Conclusion
 
-Although Strassen’s algorithm is theoretically faster than the classical and recursive approaches, **practical performance** may not reflect this due to:
+In this notebook, we explored and implemented three matrix multiplication algorithms: the standard iterative method, the recursive approach, and Strassen's algorithm. Through both correctness validation and experimental performance analysis, we observed that all three methods produce accurate results for square matrices of various sizes.
 
-- The **overhead of recursive calls and matrix splitting**, especially in interpreted languages like Python.
-- **Memory consumption** and deep recursion for large matrices.
+The performance comparison revealed that the standard iterative method (`matrix_product`) consistently outperforms the recursive and Strassen's algorithms for the tested matrix sizes (up to 128×128). Although Strassen's algorithm is theoretically more efficient for very large matrices, its practical advantages are not apparent at these scales due to overhead from recursion and additional matrix operations. To observe the theoretical benefits of Strassen's method, experiments with significantly larger matrices would be required.
 
-In actual testing with matrices of size $\left( 2^{10} \times 2^{10} \right)$, the naive element-wise multiplication **performed faster** than Strassen’s method by a large margin.
-
-Hence, this project concludes that:
-
-- The **classical method is best for general use** in Python unless highly optimized libraries are used.
-- The **recursive and Strassen methods** are better suited for theoretical study, teaching, or implementation in low-level languages with tight memory and speed control.
-- Understanding these algorithms builds foundational knowledge in algorithm design, divide-and-conquer techniques, and computational complexity.
+Overall, for small to moderately sized matrices, the standard iterative approach remains the most practical and efficient choice. Strassen's algorithm may become advantageous only for much larger matrices, where its reduced asymptotic complexity can outweigh its overhead.
 
 ## **Project Structure**
 
 The repository is organized into the following components:
 
-- **Individual Algorithm Folders**:  
-  Each matrix multiplication algorithm is placed in its own folder. Every folder contains the implementation, tests and a detailed explanation in its corresponding `README.md`.
+- `Matrix Multiplication Algorithms` Folder:
 
-## **How to Run This Project**
+  This folder contains the implementation of algorithms `matrix_product`, `recursive_matrix_product` and `strassen` and their performance comparison with each other. It includes an experiment measuring and analyzing their execution times.
 
-1. **Clone the repository**  
-   Open a terminal and run:
+- `img` Folder:
 
-   ```bash
-   git clone https://github.com/ByronVelasco/MatrixMultiplication.git
-   cd MatrixMultiplication
+  Stores the output images generated during experimentation.
 
-2. **Install the required libraries**
-   
-   Make sure you have Python installed (preferably 3.8+), then install the dependencies:
-   
-   ```bash
-   pip install -r requirements.txt
+- `project_functions.py` Python Script:
 
-3. **Open each notebook for details**
-   
-   Use your preferred Python environment (like Jupyter, VS Code, or Google Colab) and open:
+  This Python script includes all the sorting algorithms developed specifically for this project.
 
-   ```
-   1 MatrixProduct/MatrixProduct.ipynb
-   2 RecursiveProduct/RecursiveProduct.ipynb
-   3 Strassen/Strassen.ipynb
+- `requirements.txt` Text File:
+
+  This file lists all the dependencies required to run the project.
+
+## **Final Note**
+
+The system developed for this project was created solely for academic purposes. It is not designed to be an optimal or production-grade benchmarking tool.
 
 ## **Reference**
 
@@ -91,5 +74,7 @@ This project follows the structure and theoretical foundations presented in the 
 - The **educational content** (including explanations, diagrams, and documentation) is shared under the  
   [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).  
   You may reuse and adapt it for non-commercial purposes with attribution.
+
+---
 
 © 2025 Byron Velasco
