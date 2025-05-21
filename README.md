@@ -45,7 +45,7 @@ The repository is organized into the following components:
 
 - `project_functions.py` Python Script:
 
-  This Python script includes all the sorting algorithms developed specifically for this project.
+  This Python script includes all the algorithms developed specifically for this project.
 
 - `requirements.txt` Text File:
 
